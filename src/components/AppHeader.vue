@@ -233,10 +233,11 @@
           <p class="social_icons_box"><a class="fa-brands fa-linkedin"></a></p>
         </div>
       </div>
+    </div>
 
       <!-- JUMBO SECTION  -->
 
-      <div class="jumbo_section_container">
+      <kinesis-container class="jumbo_section_container">
 
         <div class="jumbo_text_container">
           <p class="jumbo_title">Hello, Im Matin</p>
@@ -245,15 +246,15 @@
         </div>
 
         <!-- absolute img section -->
-        <div class="paint_img absolute">
+        <kinesis-element :strength="40" class="paint_img absolute">
           <img src="../assets/artist-course-08-480x480.jpg" class="my_img">
-        </div>
-        <div class="astroMonkey_img absolute">
+        </kinesis-element>
+        <kinesis-element :strength="20" class="astroMonkey_img absolute">
           <img src="../assets/artist-hero-image-01.jpg" class="my_img">
-        </div>
-        <div class="artist_img absolute">
+        </kinesis-element>
+        <kinesis-element :strength="25" class="artist_img absolute">
           <img src="../assets/artist-hero-image-04.jpg" class="my_img">
-        </div>
+        </kinesis-element>
         <div class="blueDots_img absolute">
           <img src="../assets/maxcoach-shape-12.png" class="my_img">
         </div>
@@ -272,10 +273,10 @@
         <div class="right_paint absolute">
           <img src="../assets/artist-shape-05.png" class="my_img">
         </div>
-      </div>
+      </kinesis-container>
 
 
-    </div>
+    
 </template>
 
 
