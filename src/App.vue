@@ -1,6 +1,7 @@
 <!-- SCRIPT -->
 <script>
 import AppHeader from './components/AppHeader.vue';
+import AppCoursesShop from './components/AppCoursesShop.vue';
 
 import store from './data/store.js'
 
@@ -8,6 +9,7 @@ import store from './data/store.js'
 export default {
   components: {
     AppHeader,
+    AppCoursesShop,
 
   },
   data() {
@@ -32,6 +34,7 @@ export default {
 <!-- TEMPLATE -->
 <template>
   <AppHeader/>
+  <AppCoursesShop/>
 </template>
 
 

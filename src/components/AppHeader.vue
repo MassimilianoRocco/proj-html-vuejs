@@ -38,9 +38,6 @@
 
 
 
-
-
-
   },
   created() {
     this.startTimer();
@@ -224,16 +221,58 @@
                 </div>
             </div>
           </div>
-          
+
         </div>
 
 
 
         <div class="social_box">
-
+          <p class="social_icons_box"><a class="fa-brands fa-twitter"></a></p>
+          <p class="social_icons_box"><a class="fa-brands fa-facebook"></a></p>
+          <p class="social_icons_box"><a class="fa-brands fa-instagram"></a></p>
+          <p class="social_icons_box"><a class="fa-brands fa-linkedin"></a></p>
         </div>
       </div>
 
+      <!-- JUMBO SECTION  -->
+
+      <div class="jumbo_section_container">
+
+        <div class="jumbo_text_container">
+          <p class="jumbo_title">Hello, Im Matin</p>
+          <p class="jumbo_subtitle">Artist Coaching And Mentoring Might Be for You.</p>
+          <p class="jumbo_button">Get Started Today</p> 
+        </div>
+
+        <!-- absolute img section -->
+        <div class="paint_img absolute">
+          <img src="../assets/artist-course-08-480x480.jpg" class="my_img">
+        </div>
+        <div class="astroMonkey_img absolute">
+          <img src="../assets/artist-hero-image-01.jpg" class="my_img">
+        </div>
+        <div class="artist_img absolute">
+          <img src="../assets/artist-hero-image-04.jpg" class="my_img">
+        </div>
+        <div class="blueDots_img absolute">
+          <img src="../assets/maxcoach-shape-12.png" class="my_img">
+        </div>
+        <div class="leaf_img absolute">
+          <img src="../assets/artist-shape-04.png" class="my_img">
+        </div>
+        <div class="artist_paint absolute">
+          <img src="../assets/artist-hero-image-03.png" class="my_img">
+        </div>
+        <div class="backg_halfstuff absolute">
+          <img src="../assets/artist-shape-02.png" class="my_img">
+        </div>
+        <div class="backg_stuff absolute">
+          <img src="../assets/artist-shape-01.png" class="my_img">
+        </div>
+        <div class="right_paint absolute">
+          <img src="../assets/artist-shape-05.png" class="my_img">
+        </div>
+      </div>
 
 
     </div>
@@ -245,12 +284,6 @@
 
 <!-- STYLE -->
 <style scoped>
-
-  .my_img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
     /* HEADER TIMER SECTION */
    .countdown_container{
     background-color: #F5F5F5;
@@ -278,6 +311,11 @@
     color: white;
     text-align: center;
     font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+   }
+   .get_ticket_button:hover{
+    background-color: #6AC5F1;;
    }
 
    /* HEADER DROPDOWN SECTION */
@@ -288,6 +326,9 @@
     margin: auto;
     display: flex;
     align-items: center;
+    padding: 10px;
+    position: relative;
+    z-index: 999;
    }
 
    /* Logo */
@@ -398,7 +439,136 @@
 
   .social_box{
     width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .social_box>.social_icons_box{
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .social_box>.social_icons_box>a{
+    text-decoration: none;
+    color: #696985;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .social_box>.social_icons_box>a:hover{
+    color: #EF6F31;
   }
 
+  /* JUMBO SECTION  */
+
+  .jumbo_section_container{
+    width: 100%;
+    height: 600px;
+    background-color: #FBF9F6;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .jumbo_text_container{
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .jumbo_text_container>p{
+    max-width: 450px;
+  }
+  @font-face {
+    font-family: myFirstFont;
+    src: url(/public/Rossela-Demo.ttf);
+}
+  .jumbo_title{
+    font-family: myFirstFont;
+    color: #6AC5F1;
+    font-size: 50px;
+  }
+  .jumbo_subtitle{
+    font-size: 30px;
+    font-weight: bold;
+    color: #333333;
+  }
+  .jumbo_button{
+    cursor: pointer;
+    background-color: #EF6F31;
+    margin-top: 25px;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  .jumbo_button:hover{
+    background-color: #6AC5F1;
+  }
+
+  .paint_img{
+    width: 220px;
+    height: 300px;
+    left: 15%;
+    top: 20%;
+    z-index: 3;
+  }
+  .astroMonkey_img{
+    width: 160px;
+    height: 230px;
+    left: 10%;
+    bottom: 15%;
+    z-index: 4;
+  }
+  .artist_img{
+    width: 240px;
+    height: 300px;
+    bottom: 5%;
+    right: 10%;
+    z-index: 4;
+  }
+
+  .blueDots_img{
+    width: 200px;
+    height: 250px;
+    left: 5%;
+    top: 25%;
+    transform: rotate(140deg);
+    z-index: 2;
+  }
+  .leaf_img{
+    width: 120px;
+    right: 8%;
+    top: 20%;
+    z-index: 3;
+  }
+  .artist_paint{
+    width: 180px;
+    left: 25%;
+    bottom: 4%;
+    z-index: 1;
+  }
+  .backg_halfstuff{
+    width: 720px;
+    top:0;
+    left: 0;
+    z-index: 1;
+  }
+  .backg_stuff{
+    width: 550px;
+    right:10%;
+    bottom: 10%;
+    z-index: 1;
+  }
+  .right_paint{
+    width: 300px;
+    right: 4%;
+    bottom: 0%;
+    z-index: 2;
+  }
 
 </style>
