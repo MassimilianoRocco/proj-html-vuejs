@@ -13,13 +13,65 @@
           title: "The Acrylic Painting",
           n_lessons: "4 Lessons",
           n_students: "50 Students",
+          image:"artist-course-08-480x480.jpg",
+        },
+        {
+          price: "$21.00",
+          title: "Drawing and Shading: Complete Course",
+          n_lessons: "14 Lessons",
+          n_students: "50 Students",
+          image:"artist-course-07-480x480.jpg",
+        },
+        {
+          price: "$19.00",
+          title: "The Color Theory for Digital Artist",
+          n_lessons: "7 Lessons",
+          n_students: "50 Students",
+          image:"artist-course-06-480x480.jpg",
+        },
+        {
+          price: "$35.00",
+          title: "Ultimate Guide to Digital Sketching for Beginner",
+          n_lessons: "4 Lessons",
+          n_students: "50 Students",
+          image:"artist-course-05-480x480.jpg",
+        },
+        {
+          price: "$19.00",
+          title: "Portrait Drawing The Smart Way",
+          n_lessons: "2 Lessons",
+          n_students: "50 Students",
+          image:"artist-course-04-480x480.jpg",
+        },
+        {
+          price: "$19.00",
+          title: "Mastering Watercolor Painting from Beginner",
+          n_lessons: "9 Lessons",
+          n_students: "50 Students",
+          image:"artist-course-03-480x480.jpg",
+        },
+        {
+          price: "$25.00",
+          title: "The Art & Science of Drawing",
+          n_lessons: "4 Lessons",
+          n_students: "50 Students",
+          image:"artist-course-02-480x480.jpg",
+        },
+        {
+          price: "$22.00",
+          title: "The Colored Pencil Drawing Course",
+          n_lessons: "6 Lessons",
+          n_students: "50 Students",
+          image:"artist-course-01-480x480.jpg",
         },
 
       ],
     }
   },
   methods: {
-
+    getImage(nomefile) {
+      return new URL(`../assets/${nomefile}`, import.meta.url);
+    },
   },
   computed: {
    
@@ -47,92 +99,15 @@
 
       <div class="shop_container">
 
-        <!-- Card 1 -->
-        <div class="card">
+        <!-- Card -->
+        <div v-for="card in items" class="card">
           <div class="img_shop_container">
-            <img src="../assets/artist-course-08-480x480.jpg" class="my_img img_scale">
+            <img :src="getImage(card.image)" class="my_img img_scale">
           </div>
           <div class="text_shop_container">
-            <p class="item_price">$18.00</p>
-            <p class="item_title">The Acrylic Painting Accademy</p>
-            <p class="item_subinfo"><span>n lezioni</span><span>n studenti</span></p>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="card">
-          <div class="img_shop_container">
-            <img src="../assets/artist-course-07-480x480.jpg" class="my_img img_scale">
-          </div>
-          <div class="text_shop_container">
-            <p class="item_price">Prezzo</p>
-            <p class="item_title">Titolo</p>
-            <p class="item_subinfo"><span>n lezioni</span><span>n studenti</span></p>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="card">
-          <div class="img_shop_container">
-            <img src="../assets/artist-course-06-480x480.jpg" class="my_img img_scale">
-          </div>
-          <div class="text_shop_container">
-            <p class="item_price">Prezzo</p>
-            <p class="item_title">Titolo</p>
-            <p class="item_subinfo"><span>n lezioni</span><span>n studenti</span></p>
-          </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="card">
-          <div class="img_shop_container">
-            <img src="../assets/artist-course-05-480x480.jpg" class="my_img img_scale">
-          </div>
-          <div class="text_shop_container">
-            <p class="item_price">Prezzo</p>
-            <p class="item_title">Titolo</p>
-            <p class="item_subinfo"><span>n lezioni</span><span>n studenti</span></p>
-          </div>
-        </div>
-        <!-- Card 5 -->
-        <div class="card">
-          <div class="img_shop_container">
-            <img src="../assets/artist-course-04-480x480.jpg" class="my_img img_scale">
-          </div>
-          <div class="text_shop_container">
-            <p class="item_price">Prezzo</p>
-            <p class="item_title">Titolo</p>
-            <p class="item_subinfo"><span>n lezioni</span><span>n studenti</span></p>
-          </div>
-        </div>
-        <!-- Card 6 -->
-        <div class="card">
-          <div class="img_shop_container">
-            <img src="../assets/artist-course-03-480x480.jpg" class="my_img img_scale">
-          </div>
-          <div class="text_shop_container">
-            <p class="item_price">Prezzo</p>
-            <p class="item_title">Titolo</p>
-            <p class="item_subinfo"><span>n lezioni</span><span>n studenti</span></p>
-          </div>
-        </div>
-        <!-- Card 7 -->
-        <div class="card">
-          <div class="img_shop_container">
-            <img src="../assets/artist-course-02-480x480.jpg" class="my_img img_scale">
-          </div>
-          <div class="text_shop_container">
-            <p class="item_price">Prezzo</p>
-            <p class="item_title">Titolo</p>
-            <p class="item_subinfo"><span>n lezioni</span><span>n studenti</span></p>
-          </div>
-        </div>
-        <!-- Card 8 -->
-        <div class="card">
-          <div class="img_shop_container">
-            <img src="../assets/artist-course-01-480x480.jpg" class="my_img img_scale">
-          </div>
-          <div class="text_shop_container">
-            <p class="item_price">Prezzo</p>
-            <p class="item_title">Titolo</p>
-            <p class="item_subinfo"><span>n lezioni</span><span>n studenti</span></p>
+            <p class="item_price">{{ card.price }}</p>
+            <p class="item_title">{{ card.title }}</p>
+            <p class="item_subinfo"><span>{{ card.n_lessons }} </span> <span>{{card.n_students}}</span></p>
           </div>
         </div>
       </div>
@@ -221,25 +196,30 @@
     height: 300px;
     cursor: pointer;
     overflow: hidden;
-    z-index: 999;
+    z-index: 100;
     position: relative;
   }
   .text_shop_container{
     width: 80%;
     height: 100px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
     background-color: transparent;
+    position: relative;
+    z-index: 200;
     transition: all 0.3s ease-in-out;
   }
   .item_price{
+    width: 100%;
     color: #EF7032;
-    padding: 5px 15px;
     font-size: 14px;
     font-weight: bolder;
   }
   .item_title{
-    padding: 5px 15px;
+    width: 100%;
     font-size: 16px;
-    max-width: 70%;
+    max-width: 80%;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
   }
@@ -247,9 +227,10 @@
     color: #EF7032;
   }
   .item_subinfo{
-    padding: 5px 15px;
-    font-size: 12px;
+    width: 100%;
+    font-size: 14px;
     color: #333333;
+    align-self: flex-end;
   }
 
   /* Button */

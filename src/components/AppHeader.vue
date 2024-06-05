@@ -501,7 +501,7 @@
   }
   @font-face {
     font-family: myFirstFont;
-    src: url(/public/Rossela-Demo.ttf);
+    src: url(/Rossela-Demo.ttf);
 }
   .jumbo_title{
     font-family: myFirstFont;
