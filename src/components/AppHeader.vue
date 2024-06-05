@@ -23,9 +23,9 @@
         else{
           this.timer_day = Math.floor(this.timeLeft / (3600 * 24)); 
           this.timer_hours = Math.floor(this.timeLeft % (3600 * 24) / 3600);
-          this.timer_minutes = Math.floor(this.timeLeft % 3600 / 60); 
+          this.timer_minutes = Math.floor(this.timeLeft % 3600 / 60);
           this.timer_seconds = Math.floor(this.timeLeft % 60);
-
+        
           this.timeLeft--;
         }
       }, 1000);
@@ -124,7 +124,7 @@
 
           <div class="dropdown">
             <button class="dropbtn">
-              Page <span class="little_arrow">&#11167;</span>
+              Pages <span class="little_arrow">&#11167;</span>
             </button>
             <div class="dropdown-content">
               <div class="dropdown_items_box">
@@ -252,7 +252,7 @@
         <kinesis-element :strength="20" class="astroMonkey_img absolute">
           <img src="../assets/artist-hero-image-01.jpg" class="my_img">
         </kinesis-element>
-        <kinesis-element :strength="25" class="artist_img absolute">
+        <kinesis-element :strength="60" class="artist_img absolute">
           <img src="../assets/artist-hero-image-04.jpg" class="my_img">
         </kinesis-element>
         <div class="blueDots_img absolute">
@@ -316,7 +316,7 @@
     transition: all 0.2s ease-in-out;
    }
    .get_ticket_button:hover{
-    background-color: #6AC5F1;;
+    background-color: #6AC5F1;
    }
 
    /* HEADER DROPDOWN SECTION */
@@ -356,10 +356,15 @@
   .dropbtn {
     color: black;
     padding:  10px;
-    font-size: 16px;
+    font-size: 14px;
     border: none;
     background-color: unset;
     position: relative;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .dropbtn:hover {
+    color: #EF6F31;
   }
 
   /* The container <div> - needed to position the dropdown content */
@@ -401,10 +406,10 @@
   } */
   .dropbtn::after{
   content: "";
-  border-top: 1px solid red;
+  border-top: 1px solid #EF6F31;
   font-size: 0.8rem;
   position: absolute;
-  bottom: 10px;
+  bottom: 8px;
   left: 0;
   width: 0%;
   transition: all 1s ease-in-out;
@@ -419,16 +424,26 @@
 
   /* Links inside the dropdown */
   .dropdown-content a {
-    color: black;
+    color: #333333;
     padding: 6px 16px;
     text-decoration: none;
     display: block;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .dropdown-content a:hover {
+    color: #EF6F31;
   }
   .big-dropdown-content a {
-    color: black;
+    color: #333333;
     padding: 6px 16px;
     text-decoration: none;
     display: block;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .big-dropdown-content a:hover {
+    color: #EF6F31
   }
   /* Show the dropdown menu on hover */
   .dropdown:hover .big-dropdown-content {
