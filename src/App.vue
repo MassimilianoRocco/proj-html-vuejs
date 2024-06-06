@@ -6,6 +6,8 @@ import SezioneGetStarted from './components/SezioneGetStarted.vue';
 import SezioneYoutube from './components/SezioneYoutube.vue';
 import SezioneSlider from './components/SezioneSlider.vue';
 import AppCoursesShop from './components/AppCoursesShop.vue';
+import appmain from './components/appmain.vue';
+import Appfooter from './components/Appfooter.vue';
 
 import store from './data/store.js';
 
@@ -18,6 +20,8 @@ export default {
     SezioneYoutube,
     SezioneSlider,
     AppCoursesShop,
+    appmain,
+    Appfooter,
 
 
   },
@@ -84,6 +88,8 @@ export default {
   <SezioneYoutube/>
   <SezioneSlider/>
   <AppCoursesShop/>
+  <appmain/>
+  <Appfooter/>
 
 </template>
 
