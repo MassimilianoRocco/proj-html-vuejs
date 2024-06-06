@@ -37,17 +37,27 @@
     },
 
 
-
   },
   created() {
     this.startTimer();
+
+    //Per l'effetto dell'Header che va position top 0 allo scroll verso il basso
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("dropdown_section_container").style.top = "0";
+         }
+      else {
+        document.getElementById("dropdown_section_container").style.top = "35px";
+      }
+    }
   },
   mounted() {
     
   }
 }
 </script>
-
 
 
 
@@ -72,7 +82,7 @@
     </div>
 
     <!-- HEADER DROPDOWN SECTION -->
-    <div class="dropdown_section_container">
+    <div id="dropdown_section_container">
       <div class="dropdown_boxed_container">
 
         <figure class="logo_box m-0">
@@ -285,6 +295,12 @@
 
 <!-- STYLE -->
 <style scoped>
+    .headerOnScrollDown{
+      top: 0;
+    }
+    .headerOnScrollTop{
+      top: 35px;
+    }
     /* HEADER TIMER SECTION */
    .countdown_container{
     background-color: #F5F5F5;
@@ -321,13 +337,24 @@
 
    /* HEADER DROPDOWN SECTION */
 
+   #dropdown_section_container{
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    top:35px;
+    transition: top 0.3s;
+   }
    .dropdown_boxed_container{
     width: 1200px;
     background-color: white;
     margin: auto;
     display: flex;
     align-items: center;
-    padding: 20px 10px;
+    padding: 0 10px;
     position: relative;
     z-index: 999;
    }
@@ -367,7 +394,6 @@
     color: #EF6F31;
   }
 
-  /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
     display: inline-block;
@@ -397,13 +423,6 @@
     font-size: 10px;
   }
 
-  /* underlined transition effect */
-  /* .drop_title{
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    Da capire come inserire la sottolineatura non al button ma allo span
-  } */
   .dropbtn::after{
   content: "";
   border-top: 1px solid #EF6F31;
@@ -495,6 +514,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
   }
   .jumbo_text_container{
     width: 500px;

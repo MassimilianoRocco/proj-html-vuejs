@@ -82,7 +82,7 @@ export default {
   top: 200px;
   right: 0;
   z-index: 999;
-  background-color: #333333;
+  background-color: #F5F5F5;
   border-radius: 10px;
   padding: 20px 10px;
   box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.5);
@@ -91,7 +91,7 @@ export default {
 .item{
   position: relative;
   cursor: pointer;
-  color: white;
+  color: #333333;
   padding: 4px 0;
 }
 
@@ -107,13 +107,13 @@ export default {
 .contenitoreTesto {
   display: inline-block;
   padding: 2px 10px;
-  background-color: #333333;;
+  background-color: #F5F5F5;
   border-radius: 5px;
   position: relative;
   z-index: 800;
 }
 .triangle {
-  background-color: #333333;;
+  background-color: #F5F5F5;
   display: inline-block;
   height: 5px;
   width: 10px;
@@ -140,6 +140,13 @@ export default {
 
 .menu > .item:hover .tooltip {
   display: block;
+}
+
+.label>i{
+  transition: all 0.2s ease-in-out;
+}
+.label>i:hover{
+  color:#EF6F31;
 }
 
 </style>
