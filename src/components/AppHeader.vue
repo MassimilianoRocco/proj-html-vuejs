@@ -81,16 +81,16 @@
 
 
         <div class="dropdown_box">
-  
+
           <div class="dropdown">
             <button class="dropbtn">
               Home <span class="little_arrow">&#11167;</span>
             </button>
             <div class="big-dropdown-content">
               <div class="dropdown_items_box">
-                    <div><a class="dropdown-item" href="#">MaxCoach Education</a></div>
+                    <div><a class="dropdown-item" href="#">MaxCoach Education  <span class="hot_stick">Hot</span></a></div>
                     <div><a class="dropdown-item" href="#">Course Portal</a></div>
-                    <div><a class="dropdown-item" href="#">Distant Learning</a></div>
+                    <div><a class="dropdown-item" href="#">Distant Learning  <span class="hot_stick">Hot</span></a></div>
                     <div><a class="dropdown-item" href="#">Multimedia Pedagogy</a></div>
                     <div><a class="dropdown-item" href="#">Modern Schooling</a></div>
                     <div><a class="dropdown-item" href="#">Remote Training</a></div>
@@ -246,7 +246,7 @@
         </div>
 
         <!-- absolute img section -->
-        <kinesis-element :strength="40" class="paint_img absolute">
+        <kinesis-element :strength="80" class="paint_img absolute">
           <img src="../assets/artist-course-08-480x480.jpg" class="my_img">
         </kinesis-element>
         <kinesis-element :strength="20" class="astroMonkey_img absolute">
@@ -327,7 +327,7 @@
     margin: auto;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 20px 10px;
     position: relative;
     z-index: 999;
    }
@@ -443,7 +443,16 @@
     cursor: pointer;
   }
   .big-dropdown-content a:hover {
-    color: #EF6F31
+    color: #EF6F31;
+  }
+
+  .hot_stick{
+    padding: 2px 10px;
+    background: linear-gradient(225deg, rgba(254,88,59,1) 0%, rgba(254,60,128,1) 100%);
+    color: white;
+    font-size: 12px;
+    border-radius: 3px;
+
   }
   /* Show the dropdown menu on hover */
   .dropdown:hover .big-dropdown-content {
