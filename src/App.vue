@@ -1,15 +1,24 @@
 <!-- SCRIPT -->
 <script>
 import AppHeader from './components/AppHeader.vue';
+import SezioneCards from './components/SezioneCards.vue';
+import SezioneGetStarted from './components/SezioneGetStarted.vue';
+import SezioneYoutube from './components/SezioneYoutube.vue';
+import SezioneSlider from './components/SezioneSlider.vue';
 import AppCoursesShop from './components/AppCoursesShop.vue';
 
-import store from './data/store.js'
+import store from './data/store.js';
 
 
 export default {
   components: {
     AppHeader,
+    SezioneCards,
+    SezioneGetStarted,
+    SezioneYoutube,
+    SezioneSlider,
     AppCoursesShop,
+
 
   },
   data() {
@@ -70,6 +79,10 @@ export default {
   
 
   <AppHeader/>
+  <SezioneCards/>
+  <SezioneGetStarted/>
+  <SezioneYoutube/>
+  <SezioneSlider/>
   <AppCoursesShop/>
 
 </template>
@@ -146,7 +159,7 @@ export default {
   transition: all 0.2s ease-in-out;
 }
 .label>i:hover{
-  color:#EF6F31;
+  color:#EF6F31; 
 }
 
 </style>

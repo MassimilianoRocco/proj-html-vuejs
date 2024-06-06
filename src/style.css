@@ -15,3 +15,9 @@ body{
 .absolute{
   position: absolute;
 }
+
+/* due to bootshit */
+p{
+  margin: 0;
+}
+
