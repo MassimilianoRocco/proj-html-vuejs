@@ -346,7 +346,7 @@
     display: flex;
     align-items: center;
     top:35px;
-    transition: top 0.3s;
+    transition: all 0.3s;
    }
    .dropdown_boxed_container{
     width: 1200px;

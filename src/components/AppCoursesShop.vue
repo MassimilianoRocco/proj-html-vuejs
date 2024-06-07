@@ -88,7 +88,7 @@
 
 <!-- TEMPLATE -->
 <template>
-  <div class="container">
+  <div class="my_container">
     <kinesis-container>
     <div class="container_boxed">
 
@@ -118,6 +118,7 @@
 
     </div>
     
+    <!-- Lateral Text -->
     <div class="lateralText absolute">
        COURSES
     </div>
@@ -132,11 +133,12 @@
 
 
 <!-- STYLE -->
+ <!-- BootShit at the end -->
 <style scoped>
-  .container{
+  /* .container{
     padding: 50px 0;
     position: relative;
-  }
+  } */
   .container_boxed{
     width: 70%;
     margin: auto;
@@ -236,7 +238,7 @@
   /* Button */
   .shop_button{
     width: 200px;
-    margin: auto;
+    margin: 20px auto;
     color: #EF7032;
     background-color: #FEF0EA;
     padding: 10px 20px;
@@ -274,4 +276,10 @@
     z-index: 1;
   }
   
+  /* Boot... */
+  .my_container{
+    padding: 50px 0;
+    position: relative;
+  }
+
 </style>
